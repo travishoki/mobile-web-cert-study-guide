@@ -1,7 +1,7 @@
 {
-    "name": "study-guide",
+    "name": "mobile-web-cert-study-guide",
     "version": "1.0.0",
-    "description": "Study guider",
+    "description": "Mobile Web Cert Study Guide",
     "main": "app.js",
     "scripts": {
         "start": "node app.js"

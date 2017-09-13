@@ -1,3 +1,3 @@
-# Study Guide
-Run `npm run start`
-Got to `localhost:8080`
+# Mobile Web Cert Study Guide
+Run `npm run start` 
+Go to `localhost:8080`
