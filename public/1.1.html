@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Website Layout and Styling</title>
+</head>
+<body>
+    <a href="/1.0.html">Back</a>
+
+    <p>DOM elements that are accessed and manipulated using only JavaScript without the overhead of libraries or frameworks (such as jQuery)</p>
+
+    <button id="btn">Click me (<span class="clickCount">0</span>)</button>
+
+    <script>
+        let clickCount = 0;
+        const btn = document.getElementById('btn');
+        const counter = btn.getElementsByClassName('clickCount')[0];
+
+        btn.addEventListener("click", btnClick, false);
+
+        function btnClick() {
+            clickCount++;
+            counter.innerHTML = clickCount;
+
+            var p = document.createElement("p");
+            p.innerHTML = "click";
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>

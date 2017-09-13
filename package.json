@@ -1,0 +1,14 @@
+{
+    "name": "study-guide",
+    "version": "1.0.0",
+    "description": "Study guider",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.15.4"
+    }
+}
