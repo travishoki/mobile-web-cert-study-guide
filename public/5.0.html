@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Optimization and Caching</title>
+</head>
+<body>
+    <a href="/">Home</a>
+
+    <h1>Performance Optimization and Caching</h1>
+    <p>Mobile users demand websites that load nearly instantly, despite poor or absent connectivity. Because many users also face expensive data caps, you must minimize their application's data footprint to reduce page load time as much as possible. You'll be asked to show you can carry out performance audits on applications to reduce page load times and maintain responsive user experiences by:</p>
+
+    <ul>
+        <li><a href="">Preventing main thread blocking with a dedicated web worker</a></li>
+        <li>Providing an optimized critical rendering path using:
+            <ul>
+                <li><a href="">Compressed or minified JavaScript, HTML and CSS files to reduce render blocking</a></li>
+
+                <li><a href="">Inline CSS for essential styles on a specific page, with asynchronous loading for additional styles as necessary</a></li>
+                <li><a href="">Inline JavaScript files for initial rendering only where necessary (or otherwise eliminated, deferred, or marked as async)</a></li>
+                <li><a href="">Ordered loading of remaining critical resources and early download of all critical assets to shorten the critical path length</a></li>
+                <li><a href="">Reduced DOM depth to minimize browser layout/reflow</a></li>
+                <li><a href="">Your browser's developer tools to diagnose performance issues on mobile devices</a></li>
+            </ul>
+        </li>
+        <li><a href="">Prefetching files that load when resources are available, reducing the time to meaningful interaction</a></li>
+        <li>Providing client storage that is appropriate to a web application’s data persistence needs, including:
+            <ul>
+                <li><a href="">Session state management</a></li>
+                <li><a href="">Asset caching based on their impact on load time and offline functionality</a></li>
+                <li><a href="">Using IndexedDB to store dynamic content in offline mode</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Resources:</h2>
+    <ul>
+        <li><a href="https://www.udacity.com/course/offline-web-applications--ud899" target="_blank">Offline Web Applications by Google</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/performance/" target="_blank">Web Fundamentals - Performance</a></li>
+        <li><a href="https://jakearchibald.com/2014/offline-cookbook/" target="_blank">The Offline Cookbook</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache" target="_blank">Cache - MDN</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" target="_blank">Storage</a></li>
+        <li><a href="https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/" target="_blank">Local Storage And How To Use It On Websites</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" target="_blank">IndexedDB API</a></li>
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/network-performance/" target="_blank">Get Started with Analyzing Network Performance in Chrome DevTools</a></li>
+    </ul>
+</body>
+</html>
