@@ -2,10 +2,167 @@
 <html>
 <head>
     <title>Basic Website Layout and Styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <a href="/1/0.html">Back</a>
 
     <p>A responsive grid-based layout using CSS</p>
+
+    <style>
+    .grid ul {
+        list-style: none;
+        padding: 0;
+    }
+    .grid ul li {
+        padding: 20px;
+        position: relative;
+    }
+    h2 {
+        margin: 0 0 10px;
+    }
+    .weapon {
+        overflow: hidden;
+    }
+    .weapon p {
+        line-height: 30px;
+        margin: 0;
+    }
+    .description p {
+        text-indent: 20px;
+        margin: 0;
+    }
+    .box-cap {
+        position: absolute;
+    }
+    .box-cap.blue { border: solid 5px #253497; }
+    .box-cap.red { border: solid 5px #b5272c; }
+    .box-cap.orange { border: solid 5px #e6661e; }
+    .box-cap.purple { border: solid 5px #633f94; }
+    .clearfix {
+        clear: both;
+    }
+    @media (max-width: 767px) {
+        .grid ul li {
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+        .grid ul li .box-cap {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            border-top: none;
+        }
+        .profile img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        .weapon {
+            margin: 20px auto;
+            width: 130px;
+        }
+        .weapon img {
+            height: 30px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+    @media (min-width: 768px) {
+        .grid ul li {
+            margin-bottom: 20px;
+        }
+        .grid ul li .box-cap {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 20px;
+            border-left: none;
+        }
+        .weapon {
+            margin: 0 10px;
+            width: 100px;
+            text-align: center;
+            float: left;
+        }
+        .weapon img {
+            height: 80px;
+        }
+        .profile img {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+        .description {
+            margin-left: 320px
+        }
+    }
+    </style>
+
+    <div class="grid">
+        <ul>
+            <li>
+                <h2>Leonardo (Leo)</h2>
+                <div class="profile">
+                    <img src="http://static.tvtropes.org/pmwiki/pub/images/leo_icon.png" />
+                </div>
+                <div class="weapon">
+                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/256/Katana-icon.png" />
+                    <p>Katana</p>
+                </div>
+                <div class="description">
+                    <p>The tactical, courageous leader and devoted student of his sensei, Leonardo wears a blue mask and wields two katana. As the most conscientious of the four, he often bears the burden of responsibility for his brothers, which commonly leads to conflict with Raphael.</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="box-cap blue"></div>
+            </li>
+            <li>
+                <h2>Raphael (Raph)</h2>
+                <div class="profile">
+                    <img src="http://static.tvtropes.org/pmwiki/pub/images/raph_icon.png" />
+                </div>
+                <div class="weapon">
+                    <img src="http://icons.veryicon.com/ico/Movie%20%26%20TV/Turtles%20-%20Teenage%20Mutant%20Ninja/Sais.ico" />
+                    <p>Sais</p>
+                </div>
+                <div class="description">
+                    <p>The team&apos;s bad boy, Raphael wears a red mask and wields a pair of sai. He is physically very strong, has an aggressive nature, and seldom hesitates to throw the first punch. He is often depicted with a very pronounced New York accent. His personality can be fierce and sarcastic, and oftentimes delivers deadpan humor. He is intensely loyal to his brothers and sensei.</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="box-cap red"></div>
+            </li>
+            <li>
+                <h2>Michaelangelo (Mikey)</h2>
+                <div class="profile">
+                    <img src="http://static.tvtropes.org/pmwiki/pub/images/mikey_icon.png" />
+                </div>
+                <div class="weapon">
+                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/512/Nunchaco-icon.png" />
+                    <p>Nunchucks</p>
+                </div>
+                <div class="description">
+                    <p>The most stereotypical teenager of the team, Michelangelo is a free-spirited, relaxed, and often goofy jokester, and known for his love of pizza. Michelangelo wears an orange mask and wields a pair of nunchucks. He provides the comic relief, though he still has an adventurous side. The least mature of the four Turtles, he shows characteristics of a "surfer" type and is often depicted with a Southern Californian accent. </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="box-cap orange"></div>
+            </li>
+            <li>
+                <h2>Donatello (Donnie)</h2>
+                <div class="profile">
+                    <img src="http://static.tvtropes.org/pmwiki/pub/images/donnie_icon.png" />
+                </div>
+                <div class="weapon">
+                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/512/Stick-icon.png" />
+                    <p>Bo staff</p>
+                </div>
+                <div class="description">
+                    <p>The scientist, inventor, engineer, and technological genius, Donatello wears a purple mask and wields a bo staff. Donatello is perhaps the least violent turtle, preferring to use his knowledge to solve conflicts, but never hesitates to defend his brothers.</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="box-cap purple"></div>
+            </li>
+        <ul>
+    <div>
 </body>
 </html>
