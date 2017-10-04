@@ -10,159 +10,161 @@
     <p>A responsive grid-based layout using CSS</p>
 
     <style>
-    .grid ul {
-        list-style: none;
-        padding: 0;
-    }
-    .grid ul li {
-        padding: 20px;
-        position: relative;
-    }
-    h2 {
-        margin: 0 0 10px;
-    }
-    .weapon {
-        overflow: hidden;
-    }
-    .weapon p {
-        line-height: 30px;
-        margin: 0;
-    }
-    .description p {
-        text-indent: 20px;
-        margin: 0;
-    }
-    .box-cap {
-        position: absolute;
-    }
-    .box-cap.blue { border: solid 5px #253497; }
-    .box-cap.red { border: solid 5px #b5272c; }
-    .box-cap.orange { border: solid 5px #e6661e; }
-    .box-cap.purple { border: solid 5px #633f94; }
-    .clearfix {
-        clear: both;
-    }
-    @media (max-width: 767px) {
-        .grid ul li {
-            max-width: 400px;
-            margin: 0 auto 20px;
-        }
-        .grid ul li .box-cap {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 20px;
-            border-top: none;
-        }
-        .profile img {
-            max-width: 100%;
-            display: block;
+        .grid {
+            max-width: 1024px;
             margin: 0 auto;
         }
-        .weapon {
-            margin: 20px auto;
-            width: 130px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-left: -10px;
+            margin-right: -10px;
         }
-        .weapon img {
-            height: 30px;
+        ul li {
             float: left;
-            margin-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
         }
-    }
-    @media (min-width: 768px) {
-        .grid ul li {
-            margin-bottom: 20px;
+        ul li img {
+            width: 100%;
         }
-        .grid ul li .box-cap {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 20px;
-            border-left: none;
+        .col-xs-12 {
+            width: 100%;
         }
-        .weapon {
-            margin: 0 10px;
-            width: 100px;
-            text-align: center;
-            float: left;
+
+        @media (min-width: 768px) {
+            .col-sm-6 {
+                width: 50%;
+            }
+            ul li:nth-child(2n+1) {
+                clear: both;
+            }
         }
-        .weapon img {
-            height: 80px;
+
+        @media (min-width: 992px) {
+            .col-md-4 {
+                width: 33.33333333%;
+            }
+            ul li:nth-child(3n+1) {
+                clear: both;
+            }
         }
-        .profile img {
-            float: left;
-            width: 200px;
-            height: 200px;
+
+        @media (min-width: 1024px) {
+            .col-lg-3 {
+                width: 25%;
+            }
+            ul li:nth-child(4n+1) {
+                clear: both;
+            }
         }
-        .description {
-            margin-left: 320px
-        }
-    }
     </style>
 
     <div class="grid">
         <ul>
-            <li>
-                <h2>Leonardo (Leo)</h2>
-                <div class="profile">
-                    <img src="http://static.tvtropes.org/pmwiki/pub/images/leo_icon.png" />
-                </div>
-                <div class="weapon">
-                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/256/Katana-icon.png" />
-                    <p>Katana</p>
-                </div>
-                <div class="description">
-                    <p>The tactical, courageous leader and devoted student of his sensei, Leonardo wears a blue mask and wields two katana. As the most conscientious of the four, he often bears the burden of responsibility for his brothers, which commonly leads to conflict with Raphael.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="box-cap blue"></div>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Optimus Prime"
+                    src="http://www.transformers-universe.com/content/images/galerie/pics/59/5918_PowermasterPrime_Dreamwave_Profile2.jpg" />
             </li>
-            <li>
-                <h2>Raphael (Raph)</h2>
-                <div class="profile">
-                    <img src="http://static.tvtropes.org/pmwiki/pub/images/raph_icon.png" />
-                </div>
-                <div class="weapon">
-                    <img src="http://icons.veryicon.com/ico/Movie%20%26%20TV/Turtles%20-%20Teenage%20Mutant%20Ninja/Sais.ico" />
-                    <p>Sais</p>
-                </div>
-                <div class="description">
-                    <p>The team&apos;s bad boy, Raphael wears a red mask and wields a pair of sai. He is physically very strong, has an aggressive nature, and seldom hesitates to throw the first punch. He is often depicted with a very pronounced New York accent. His personality can be fierce and sarcastic, and oftentimes delivers deadpan humor. He is intensely loyal to his brothers and sensei.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="box-cap red"></div>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Megatron"
+                    src="https://i.pinimg.com/736x/ab/03/74/ab0374c8c9226c8735cb393d7997c223--transformers-decepticons-transformers-robots.jpg" />
             </li>
-            <li>
-                <h2>Michaelangelo (Mikey)</h2>
-                <div class="profile">
-                    <img src="http://static.tvtropes.org/pmwiki/pub/images/mikey_icon.png" />
-                </div>
-                <div class="weapon">
-                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/512/Nunchaco-icon.png" />
-                    <p>Nunchucks</p>
-                </div>
-                <div class="description">
-                    <p>The most stereotypical teenager of the team, Michelangelo is a free-spirited, relaxed, and often goofy jokester, and known for his love of pizza. Michelangelo wears an orange mask and wields a pair of nunchucks. He provides the comic relief, though he still has an adventurous side. The least mature of the four Turtles, he shows characteristics of a "surfer" type and is often depicted with a Southern Californian accent. </p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="box-cap orange"></div>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Nightbeat"
+                    src="https://i.pinimg.com/736x/df/07/24/df072452cb18df42b1a4f12f3a00cde4--transformers-decepticons-transformers-art.jpg" />
             </li>
-            <li>
-                <h2>Donatello (Donnie)</h2>
-                <div class="profile">
-                    <img src="http://static.tvtropes.org/pmwiki/pub/images/donnie_icon.png" />
-                </div>
-                <div class="weapon">
-                    <img src="http://icons.iconarchive.com/icons/yellowicon/tmnt/512/Stick-icon.png" />
-                    <p>Bo staff</p>
-                </div>
-                <div class="description">
-                    <p>The scientist, inventor, engineer, and technological genius, Donatello wears a purple mask and wields a bo staff. Donatello is perhaps the least violent turtle, preferring to use his knowledge to solve conflicts, but never hesitates to defend his brothers.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="box-cap purple"></div>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Jazz"
+                    src="https://s-media-cache-ak0.pinimg.com/originals/0b/e4/86/0be48609e809d8358914b9e99815a5d5.jpg" />
             </li>
-        <ul>
-    <div>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Trainbot"
+                    src="https://img00.deviantart.net/ef93/i/2012/248/3/e/mtmte___seizan___profile_by_jp_v-d5dqop6.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Firebomb"
+                    src="https://i.pinimg.com/736x/de/2c/87/de2c87bc561da1c959b68b7ade2b36ec--transformers-decepticons-transformers-robots.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Camshaft"
+                    src="https://s-media-cache-ak0.pinimg.com/736x/a9/f8/7a/a9f87a93f733c37692c0c342780f0d41.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Raiden"
+                    src="https://pre00.deviantart.net/91fe/th/pre/i/2015/105/8/4/mtmte___raiden___profile_by_jp_v-d8a2fjv.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Sunstreaker"
+                    src="https://i.pinimg.com/736x/53/74/7a/53747a7633ee86468e0b1a1082f7031a--transformers-characters-transformers-decepticons.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="First Aid"
+                    src="https://s-media-cache-ak0.pinimg.com/originals/e6/bf/1c/e6bf1cece924bf95e7b30c0ded08e642.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Sideswipe"
+                    src="http://www.heerotoys.com/images/upload/Image/12110_Sideswipe_DreamwaveProfile_conew1.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Loki"
+                    src="https://i.pinimg.com/736x/83/46/c3/8346c3729c31b393d6885b1033aabf17--transformers-decepticons-transformers-robots.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Doubleheader"
+                    src="https://i.pinimg.com/736x/87/af/c9/87afc91543e487afac7239b2597d0a4f--transformers-decepticons-transformers-pretenders.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Mini-Spies"
+                    src="https://s-media-cache-ak0.pinimg.com/originals/c5/b9/a2/c5b9a24291bcbd62cf09b1bbc1ffb990.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Superion"
+                    src="https://s-media-cache-ak0.pinimg.com/originals/56/85/c4/5685c40b2b9b3fcc5704a1653ca94f0d.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Ravage"
+                    src="http://www.transformers-universe.com/content/images/galerie/pics/332/33219_Ravage_DreamwaveProfile.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Hosehead"
+                    src="http://www.transformers-universe.com/content/images/galerie/pics/687/68710_Hosehead_Profile.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Prowl"
+                    src="https://i.pinimg.com/736x/95/ef/c5/95efc5f245762d29b6e6d2b45ff0fcd6--transformers-armada-transformers-characters.jpg" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Frenzy"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1EYTNYAYeKRIjpnVTDKg2IyPZ2bx0F0jQX4sAPKgBYNUPpJS" />
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img
+                    alt="Landmine"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQITNO2KXmNLK_0eG3v81YQHqaUGVnlAzLnU-5L76YPxR0TW61F" />
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
